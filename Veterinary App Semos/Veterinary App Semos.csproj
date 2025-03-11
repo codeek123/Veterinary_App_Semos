@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+	  <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-Veterinary_App_Semos-9ebd707e-18b9-49a4-b9be-bb265296acbb</UserSecretsId>
     <RootNamespace>Veterinary_App_Semos</RootNamespace>
