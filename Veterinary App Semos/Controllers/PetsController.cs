@@ -82,7 +82,7 @@ namespace Veterinary_App_Semos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PetId,Name,Age,OwnerId")] Pet pet)
+        public async Task<IActionResult> Create([Bind("PetId,Name,Age,OwnerId, VaccinesNames")] Pet pet)
         {
             if (ModelState.IsValid)
             {
@@ -125,7 +125,7 @@ namespace Veterinary_App_Semos.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PetId,Name,Age,OwnerId")] Pet pet)
+        public async Task<IActionResult> Edit(int id, [Bind("PetId,Name,Age,OwnerId, VaccinesNames")] Pet pet)
         {
             if (id != pet.PetId)
             {
