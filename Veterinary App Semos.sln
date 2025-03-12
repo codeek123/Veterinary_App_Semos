@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veterinary App Semos", "Veterinary App Semos\Veterinary App Semos.csproj", "{33C7EEFA-BDA7-4CDF-A9E4-DD713E5164CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veterinary App Semos", "Veterinary App Semos\Veterinary App Semos.csproj", "{33C7EEFA-BDA7-4CDF-A9E4-DD713E5164CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinaryApp.Tests", "TestProject\VeterinaryApp.Tests.csproj", "{A4EE0810-EF83-42E9-829C-F7413DFD9A90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{33C7EEFA-BDA7-4CDF-A9E4-DD713E5164CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C7EEFA-BDA7-4CDF-A9E4-DD713E5164CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C7EEFA-BDA7-4CDF-A9E4-DD713E5164CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EE0810-EF83-42E9-829C-F7413DFD9A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EE0810-EF83-42E9-829C-F7413DFD9A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EE0810-EF83-42E9-829C-F7413DFD9A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EE0810-EF83-42E9-829C-F7413DFD9A90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
