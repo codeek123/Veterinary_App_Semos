@@ -64,7 +64,7 @@ namespace VeterinaryApp.Tests
             var owner = new Owner { Surname = "Markovski", Age = 25 };
 
             // Act
-            var validationResults = ValidateModel(owner);
+            var validationResults = ValidationHelper.ValidateModel(owner);
 
             // Assert
             Assert.IsTrue(validationResults.Any(v => v.MemberNames.Contains("Name")));
@@ -77,19 +77,13 @@ namespace VeterinaryApp.Tests
             var owner = new Owner { Name = "Marko", Age = 25 };
 
             // Act
-            var validationResults = ValidateModel(owner);
+            var validationResults = ValidationHelper.ValidateModel(owner);
 
             // Assert
             Assert.IsTrue(validationResults.Any(v => v.MemberNames.Contains("Surname")));
         }
 
-        private static List<ValidationResult> ValidateModel(object model)
-        {
-            var validationResults = new List<ValidationResult>();
-            var context = new ValidationContext(model, null, null);
-            Validator.TryValidateObject(model, context, validationResults, true);
-            return validationResults;
-        }
+       
 
 
     }

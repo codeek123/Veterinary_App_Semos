@@ -32,7 +32,7 @@ namespace VeterinaryApp.Tests
             var pet = new Pet { Age = 5 };
 
             // Act
-            var validationResults = ValidateModel(pet);
+            var validationResults = ValidationHelper.ValidateModel(pet);
 
             // Assert
             Assert.IsTrue(validationResults.Any(v => v.MemberNames.Contains("Name")));
@@ -63,7 +63,7 @@ namespace VeterinaryApp.Tests
             var pet = new Pet { Name = "Luna", Age = -1 };
 
             // Act
-            var validationResults = ValidateModel(pet);
+            var validationResults = ValidationHelper.ValidateModel(pet);
 
             // Assert
             Assert.IsTrue(validationResults.Any(v => v.MemberNames.Contains("Age")));
@@ -114,12 +114,6 @@ namespace VeterinaryApp.Tests
 
 
 
-        private static List<ValidationResult> ValidateModel(object model)
-        {
-            var validationResults = new List<ValidationResult>();
-            var context = new ValidationContext(model, null, null);
-            Validator.TryValidateObject(model, context, validationResults, true);
-            return validationResults;
-        }
+      
     }
 }
