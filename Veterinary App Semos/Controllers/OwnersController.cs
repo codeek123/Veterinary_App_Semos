@@ -57,6 +57,7 @@ namespace Veterinary_App_Semos.Controllers
             }
 
             var owner = await _context.Owners
+                .Include(o => o.Pets)
                 .FirstOrDefaultAsync(m => m.OwnerId == id);
             if (owner == null)
             {
