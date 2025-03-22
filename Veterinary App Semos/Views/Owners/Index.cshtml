@@ -1,53 +1,60 @@
 ﻿@model IEnumerable<Veterinary_App_Semos.Models.Owner>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Owners";
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/ownerIndex.css" asp-append-version="true" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Surname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Age)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pets)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pets.Count)
-                </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.OwnerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.OwnerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.OwnerId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+</head>
+<body>
+
+    <div class="container py-4">
+        <div class="title-container text-center">
+            <h1>🐾 Our Family of Pet Owners 🐾</h1>
+        </div>
+
+        <div class="mb-3 text-end">
+            <a asp-action="Create" class="btn btn-violet">➕ Create New Owner</a>
+        </div>
+
+        <table class="table table-borderless">
+            <thead class="table-header">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Surname)</th>
+                    <th>@Html.DisplayNameFor(model => model.Age)</th>
+                    <th>Number of Pets</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Surname)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Age)</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">@item.Pets.Count</span>
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.OwnerId" class="btn btn-sm btn-outline-secondary">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.OwnerId" class="btn btn-sm btn-outline-info">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.OwnerId" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
