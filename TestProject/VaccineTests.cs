@@ -19,8 +19,8 @@ namespace VeterinaryApp.Tests
             var vaccine2 = new Vaccine { Name = null };
 
             // Act
-            var validationResults1 = ValidateModel(vaccine1);
-            var validationResults2 = ValidateModel(vaccine2);
+            var validationResults1 = ValidationHelper.ValidateModel(vaccine1);
+            var validationResults2 = ValidationHelper.ValidateModel(vaccine2);
 
             // Assert
             Assert.IsTrue(validationResults1.Any(v => v.MemberNames.Contains("Name")));
@@ -58,13 +58,7 @@ namespace VeterinaryApp.Tests
             Assert.AreEqual(0, vaccine.Pets.Count);
         }
 
-        private static List<ValidationResult> ValidateModel(object model)
-        {
-            var validationResults = new List<ValidationResult>();
-            var context = new ValidationContext(model, null, null);
-            Validator.TryValidateObject(model, context, validationResults, true);
-            return validationResults;
-        }
+       
 
     }
 }

@@ -1,0 +1,46 @@
+/* Navbar Custom Styles */
+.navbar-custom {
+    background-color: #e6ccff;
+    border-bottom: 3px solid #6a0dad;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+.logo {
+    width: 90px; 
+    height: 80px;
+    margin-right: 10px;
+}
+
+.hospital-name {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6a0dad;
+    line-height: 1.2;
+}
+
+    .hospital-name small {
+        font-size: 14px;
+        display: block;
+        color: #6a0dad;
+    }
+
+.navbar-nav .nav-link {
+    color: #6a0dad;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #6a0dad;
+    }
