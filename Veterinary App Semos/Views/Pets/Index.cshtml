@@ -1,55 +1,40 @@
 ﻿@model IEnumerable<Veterinary_App_Semos.Models.Pet>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Pets";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="~/css/petIndex.css" asp-append-version="true" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Age)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Owner)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vaccines)
 
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                    @item.Owner.getFirstNameAndLastName()
-            </td>
-                <td>
-                    @item.Vaccines.Count
-                </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PetId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PetId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PetId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container py-4">
+    <div class="title-container text-center">
+        <h1>🐾 Pets in Our Clinic 🐾</h1>
+    </div>
+
+    <div class="text-center">
+        <a asp-action="Create" class="create-btn"><i class="fas fa-plus"></i>➕ Create New Pet</a>
+    </div>
+
+    <div class="card-container">
+        @foreach (var item in Model)
+        {
+            <div class="card pet-card">
+                <div class="pet-icon">
+                    <i class="fas fa-dog"></i>
+                </div>
+                <h5>@item.Name</h5>
+                <p><strong>Age:</strong> @item.Age</p>
+                <p><strong>Owner:</strong> @item.Owner.getFirstNameAndLastName()</p>
+                <p><strong>Vaccines:</strong> @item.Vaccines.Count</p>
+
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.PetId" class="btn btn-custom">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.PetId" class="btn btn-custom">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.PetId" class="btn btn-custom">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
