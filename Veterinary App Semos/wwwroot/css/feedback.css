@@ -81,7 +81,7 @@
     right: 10px;
 }
 
-/* Решавање проблем со копчињата во мали екрани */
+
 @media (max-width: 768px) {
     .prev-btn {
         left: 10px;
