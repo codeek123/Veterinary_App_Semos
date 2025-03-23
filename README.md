@@ -36,22 +36,17 @@ The **Veterinary Management System** is a full-stack web application built using
 - Visual Studio
 
 ###  **Setup Steps**
- **Clone the repository**  
+ #Clone the repository 
 ```sh
 git clone https://github.com/codeek123/Veterinary_App_Semos.git
 cd veterinary-app  
 
- **Run migrations and update the database**  
+ #Run migrations and update the database
 
-
-```sh
 dotnet ef migrations add Initial1  
 dotnet ef database update  
 
- **Run the application**  
-Once the database is set up, start the application with the following command:  
-
-```sh
+#Run the application
 dotnet run  
 
 
