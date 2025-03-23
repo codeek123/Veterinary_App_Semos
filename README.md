@@ -41,15 +41,23 @@ The **Veterinary Management System** is a full-stack web application built using
 git clone https://github.com/codeek123/Veterinary_App_Semos.git
 cd veterinary-app  
 
- #Run migrations and update the database
-
-dotnet ef migrations add Initial1  
-dotnet ef database update  
+#Run migrations and update the database
+enable-migrations
+add-migrations Initial1
+update-database
 
 #Run the application
 dotnet run  
 
+```
+###  **Technologies Used**
 
+| **Component**  | **Technology**  |  
+|---------------|----------------|  
+| **Backend**   | ASP.NET Core MVC, Entity Framework Core |  
+| **Database**  | SQL Server |  
+| **Frontend**  | Razor Views (Bootstrap for styling) |  
+| **Caching**   | MemoryCache for optimized data retrieval |  
 
 
 
