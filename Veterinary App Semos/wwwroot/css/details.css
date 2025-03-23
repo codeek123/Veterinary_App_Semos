@@ -1,0 +1,61 @@
+﻿.owner-card {
+    width: 50%;
+    margin: 40px auto 10px auto;
+    background-color: #E6CCFF;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.owner-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+.pets-title {
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.list-group-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+}
+
+.pet-badge {
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.footer-bg {
+    border-radius: 0 0 15px 15px;
+    background-color: #E6CCFF;
+}
+
+.edit-btn, .back-btn {
+    background-color: #6A0DAD;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+    .edit-btn:hover, .back-btn:hover {
+        background-color: #550A8A;
+    }
+
+.edit-btn, .back-btn {
+    color: yellow !important;
+}
+
+h4 {
+    text-align: center;
+    font-weight: 700;
+    color: #7a4da9;
+}
