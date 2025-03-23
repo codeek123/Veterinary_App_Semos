@@ -1,67 +1,66 @@
-Veterinary Management System
-This is the final project from the Full Stack .NET Academy, designed for a veterinary clinic to efficiently manage Pets, Owners, and Vaccines. The system provides CRUD functionalities, authentication, and caching for optimal performance.
+# Veterinary Management System 🐾
 
-Features
-User Authentication & Authorization: Admin and Regular User roles
+Welcome to the **Veterinary Management System**, a platform designed to streamline pet, owner, and vaccine management in veterinary clinics.
 
-Owner & Pet Management: Create, read, update, and delete owners and pets
+---
 
-Vaccine Tracking: Assign multiple vaccines to pets
+##  Overview
+The **Veterinary Management System** is a full-stack web application built using **.NET Core** and **SQL Server** to help veterinary clinics efficiently manage **pets, owners, and vaccination records**. It provides **CRUD functionalities, user authentication, and caching mechanisms** for optimal performance.
 
-Caching Mechanism: Improves performance by caching frequently accessed data
+---
 
-Database with Entity Framework Core: Code-First approach with SQL Server
+##  Features
+- 🔹 **User Authentication & Authorization** – Admin and Regular User roles  
+- 🔹 **Owner & Pet Management** – Create, Read, Update, and Delete records  
+- 🔹 **Vaccine Tracking** – Assign multiple vaccines to pets  
+- 🔹 **Caching Mechanism** – Enhances performance using **MemoryCache**  
+- 🔹 **Database with Entity Framework Core** – Code-First approach using **SQL Server**  
+- 🔹 **Clean Code & OOP Principles** – Following best practices in software design  
+- 🔹 **Unit Testing** – Ensuring system reliability and robustness  
 
-Clean Code & OOP Principles: Following best practices in software design
+---
 
-Unit Testing: Ensuring system reliability
+##  User Roles
+| Role | Permissions |
+|------|------------|
+| **Admin** | Full control (CRUD operations) |
+| **Regular User** | Limited access (can view & create pets) |
 
-User Roles
-Admin: Full control (CRUD operations)
+---
 
-Regular User: Limited access (view & create pets)
+##  Installation & Setup
 
-Installation & Setup
-Prerequisites
-.NET 6+
+###  **Prerequisites**
+- .NET 6+
+- SQL Server
+- Visual Studio
 
-SQL Server
-
-Visual Studio
-
-Setup Steps
-Clone the repository
-
-sh
-Copy
-Edit
+###  **Setup Steps**
+1️⃣ **Clone the repository**  
+```sh
 git clone https://github.com/codeek123/Veterinary_App_Semos.git
 cd veterinary-app  
-Set up the database
 
-Configure appsettings.json with the SQL Server connection string
+2️⃣ **Run migrations and update the database**  
+Run the following commands to apply the migrations and create the database:  
 
-Run migrations:
-
-sh
-Copy
-Edit
+```sh
 dotnet ef migrations add Initial1  
 dotnet ef database update  
 
-Run the application
+43️⃣ **Run the application**  
+Once the database is set up, start the application with the following command:  
 
-sh
-Copy
-Edit
+```sh
 dotnet run  
-Technologies Used
-Backend: ASP.NET Core MVC, Entity Framework Core
 
-Database: SQL Server
 
-Frontend: Razor Views (Bootstrap for styling)
+### Technologies Used
 
-Caching: MemoryCache for optimized data retrieval
+| Component  | Technology |
+|------------|------------|
+| **Backend** | ASP.NET Core MVC, Entity Framework Core |
+| **Database** | SQL Server |
+| **Frontend** | Razor Views (Bootstrap for styling) |
 
-This system ensures efficient pet management, easy vaccine tracking, and secure access control, providing a seamless experience for veterinary clinics. 
+
