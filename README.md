@@ -36,8 +36,9 @@ The **Veterinary Management System** is a full-stack web application built using
 - Visual Studio
 
 ###  **Setup Steps**
- #Clone the repository 
+ 
 ```sh
+#Clone the repository 
 git clone https://github.com/codeek123/Veterinary_App_Semos.git
 cd veterinary-app  
 
