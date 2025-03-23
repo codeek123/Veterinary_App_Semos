@@ -10,13 +10,13 @@ The **Veterinary Management System** is a full-stack web application built using
 ---
 
 ##  Features
-- 🔹 **User Authentication & Authorization** – Admin and Regular User roles  
-- 🔹 **Owner & Pet Management** – Create, Read, Update, and Delete records  
-- 🔹 **Vaccine Tracking** – Assign multiple vaccines to pets  
-- 🔹 **Caching Mechanism** – Enhances performance using **MemoryCache**  
-- 🔹 **Database with Entity Framework Core** – Code-First approach using **SQL Server**  
-- 🔹 **Clean Code & OOP Principles** – Following best practices in software design  
-- 🔹 **Unit Testing** – Ensuring system reliability and robustness  
+-  **User Authentication & Authorization** – Admin and Regular User roles  
+-  **Owner & Pet Management** – Create, Read, Update, and Delete records  
+-  **Vaccine Tracking** – Assign multiple vaccines to pets  
+-  **Caching Mechanism** – Enhances performance using **MemoryCache**  
+-  **Database with Entity Framework Core** – Code-First approach using **SQL Server**  
+-  **Clean Code & OOP Principles** – Following best practices in software design  
+-  **Unit Testing** – Ensuring system reliability and robustness  
 
 ---
 
