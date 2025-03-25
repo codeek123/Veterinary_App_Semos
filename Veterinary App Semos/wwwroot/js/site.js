@@ -18,20 +18,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll('.slide');
+    let textContainer = document.querySelector('.image-text');
     let index = 0;
 
+    const slideData = [
+        {
+            text: '<h1>Best help for <br><span>your best friends</span></h1>',
+            positionClass: 'slide-position1'
+        },
+        {
+            text: '<h1>Caring for <br><span>every pet</span></h1>',
+            positionClass: 'slide-position2'
+        },
+        {
+            text: '<h1>Quality care for <br><span>your feline companions</span></h1>',
+            positionClass: 'slide-position3'
+        }
+    ];
+
+    slides[index].classList.add("active");
+    textContainer.innerHTML = slideData[index].text;
+    textContainer.classList.add(slideData[index].positionClass, "active");
+
+    setInterval(changeSlide, 3000);
+
     function changeSlide() {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active");
+        slides[index].classList.remove("active");
+        textContainer.classList.remove("active");
+
+        index = (index + 1) % slides.length;
+
+        textContainer.innerHTML = slideData[index].text;
+        textContainer.classList.remove("slide-position1", "slide-position2", "slide-position3");
+        textContainer.classList.add(slideData[index].positionClass);
+
+        requestAnimationFrame(() => {
+            slides[index].classList.add("active");
+            textContainer.classList.add("active");
         });
-
-        slides[index].classList.add("active");
-        index = (index + 1) % slides.length; 
     }
-
-    setInterval(changeSlide, 3000); 
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     const slides = document.querySelectorAll(".feedback-slide");
