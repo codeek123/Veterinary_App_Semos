@@ -1,22 +1,56 @@
-.btn-primary {
-    background-color: #e6ccff !important;
-    border-color: yellow !important;
-    color: black !important; 
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-
-h2{
-    color: #7a1fa2;
-    font-weight: bold;
-    
+.container > main.pb-3 > .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
-a{
+.col-md-4 {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem auto;
+    background-color: #e6ccff;
+}
+h1, h2 {
     text-align: center;
+    color: #6A0DAD;
+    font-weight: 600;
+}
+
+.form-control:focus {
+    border-color: #6A0DAD;
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25);
+}
+
+#login-submit,
+.btn-primary {
+    background-color: #6A0DAD !important; 
+    border-color: #6A0DAD !important;
+    color: #fff !important;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+    #login-submit:hover,
+    .btn-primary:hover {
+        background-color: #5a099f !important;
+        border-color: #5a099f !important;
+    }
+
+#account a {
+    color: #6A0DAD;
     text-decoration: none;
 }
 
-h1 {
-    color: #7a1fa2;
-}
+    #account a:hover {
+        text-decoration: underline;
+    }
 
