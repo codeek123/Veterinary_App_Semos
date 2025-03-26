@@ -1,0 +1,22 @@
+.btn-primary {
+    background-color: #e6ccff !important;
+    border-color: yellow !important;
+    color: black !important; 
+}
+
+
+h2{
+    color: #7a1fa2;
+    font-weight: bold;
+    
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    color: #7a1fa2;
+}
+

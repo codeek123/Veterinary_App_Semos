@@ -2,7 +2,7 @@ html {
     font-size: 14px;
     position: relative;
     min-height: 100%;
-  
+    
 }
 
 @media (min-width: 768px) {
@@ -21,7 +21,7 @@ body {
     background-color: lightgoldenrodyellow;
     overflow-x: hidden;
     padding: 0;
-   
+ 
 }
 
 
@@ -32,6 +32,9 @@ body {
     font-size: 0.95rem;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
     border-top: 3px solid #6a0dad;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
 }
 
     .custom-footer h5 {
@@ -70,3 +73,6 @@ body {
     .social-icons a:hover {
         color: #5c3b84;
     }
+
+    
+
