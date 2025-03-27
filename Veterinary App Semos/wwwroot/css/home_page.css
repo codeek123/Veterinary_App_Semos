@@ -84,8 +84,8 @@
     }
 
     .image-text.slide-position3 {
-        top: 5%;
-        left: 5%;
+        top: 10%;
+        left: 10%;
         transform: translate(0, 0);
         background: rgba(255, 255, 153, 0.7);
     }
@@ -198,25 +198,3 @@ h2 {
         object-fit: cover;
         display: block;
     }
-
-.my-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.my-col-md-4 {
-    flex: 0 0 auto;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-    .my-col-md-4 {
-        width: 33.3333%;
-    }
-}
-
