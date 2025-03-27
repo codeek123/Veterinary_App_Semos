@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             positionClass: 'slide-position2'
         },
         {
-            text: '<h1>Dedicated to the health and<br><span> happiness of your pets.</span></h1>',
+            text: '<h1>Quality care for <br><span>your feline companions</span></h1>',
             positionClass: 'slide-position3'
         }
     ];
